@@ -1,21 +1,33 @@
-// Get elements
-const subscribeBtn = document.getElementById("subscribeBtn");
 const popup = document.getElementById("newsletterPopup");
 const closeBtn = document.querySelector(".close");
+const newsletterForm = document.getElementById("newsletterForm");
 
-// Show the popup automatically after a delay
 setTimeout(() => {
-    popup.style.display = "block";
-}, 5000); 
-
-// Close the popup when the close button is clicked
-closeBtn.addEventListener("click", () => {
-    popup.style.display = "none";
-});
-
-// Close the popup if user clicks outside the popup content
-window.addEventListener("click", (event) => {
-    if (event.target == popup) {
-        popup.style.display = "none";
+    if (popup) {
+        popup.style.display = "block"; // Show the popup
     }
-});
+}, 5000);
+
+if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+        if (popup) {
+            popup.style.display = "none"; // Hide the popup
+        }
+    });
+}
+
+if (popup) {
+    window.addEventListener("click", (event) => {
+        if (event.target === popup) {
+            popup.style.display = "none"; // Hide the popup
+        }
+    });
+}
+
+if (newsletterForm) {
+    newsletterForm.addEventListener("submit", (event) => {
+        event.preventDefault(); // Prevent the default form submission
+        alert("Thank you for subscribing!"); // Show thank you message
+        popup.style.display = "none"; // Close the popup
+    });
+}
