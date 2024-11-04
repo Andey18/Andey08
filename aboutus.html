@@ -3,178 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barangay Website</title>
-    <link rel="stylesheet" href="style.css"> 
-    <style>
-        body {
-            font-family: 'Cambria', serif; 
-            margin: 0;
-            padding: 0;
-            background-color: #e6f7ff; 
-        }
-    
-        header {
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-            padding: 1.5em 0;
-        }
-    
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-    
-        p {
-            text-align: center;
-        }
-    
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            background-color: #007bff; 
-            overflow: hidden;
-            text-align: center;
-        }
-    
-        nav ul li {
-            display: inline-block;
-            margin-right: 20px;
-        }
-    
-        nav ul li a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            font-size: 1.1em;
-        }
-    
-        nav ul li a:hover {
-            background-color: #0056b3; 
-            border-radius: 5px;
-        }
-    
-        main {
-            padding: 20px;
-            text-align: center;
-            margin: 30px 0;
-        }
-    
-        main h2 {
-            font-size: 2em;
-            margin-bottom: 15px;
-        }
-    
-        main p {
-            font-size: 1.2em;
-            max-width: 800px;
-            margin: auto;
-            line-height: 1.6;
-        }
-    
-        .popup {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-    
-        .popup-content {
-            background-color: white;
-            margin: 10% auto;
-            padding: 20px;
-            width: 40%;
-            border-radius: 10px;
-            text-align: center;
-        }
-    
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-    
-        .close:hover,
-        .close:focus {
-            color: black;
-            cursor: pointer;
-        }
-    
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-    
-        form label {
-            font-size: 1.2em;
-            margin: 10px 0 5px;
-        }
-    
-        form input {
-            padding: 10px;
-            width: 80%;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-bottom: 15px;
-        }
-    
-        button {
-            background-color: #007bff; 
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            cursor: pointer;
-        }
-    
-        button:hover {
-            background-color: #0056b3; 
-        }
-    
-        img {
-            width: 100px;
-            height: 100px;
-            float: left;
-            margin-top: 15px;
-            margin-left: 20px;
-        }
-    </style>    
+    <title>Barangay Website - About Us</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a></a><img src="LOGO.png" style="width: 100px; height: 100px; float: left; margin-top: 15px; margin-left: 20px;">
-    </a>
     <header>
-        <h1>Welcome to Barangay San Nicolas!</h1>
+        <div class="logo">
+            <img src="LOGO.jpg" alt="Barangay Logo">
+        </div>
+        <h1>Barangay San Nicolas</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="service.html">Services</a></li>
-                <li><a href="#about">About Us</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="home">
+        <section id="about">
             <h2>About Us</h2>
             <p>
-                Welcome to Barangay San Nicolas! We are delighted to have you visit our official website. Barangay Perez, nestled in the heart of San Pablo, Calabarzon, is a vibrant community known for its rich culture, warm hospitality, and scenic beauty. Our website is designed to provide you with all the information you need about our barangay, from local news and events to essential services and community programs.
+                Welcome to Brgy. San Nicolas, a vibrant community where tradition meets modernity. With a rich history that has shaped our evolution, we take pride in our diverse population and friendly atmosphere. Residents actively engage in events that promote unity and collaboration. Our vision focuses on sustainable development, education, and social welfare to enhance the quality of life for all. As we look to the future, we remain committed to preserving our heritage while adapting to the changing needs of our community, striving to make Brgy. San Nicolas a shining example of resilience and community spirit.
             </p>
-            <br>
-            <p>
-                Barangay San Nicolas is a vibrant community located in San Pablo City, Laguna, known for its rich cultural heritage and strong sense of community. 
-                With a population that reflects the diversity of the region, we are dedicated to promoting local initiatives, enhancing public services, and fostering a welcoming environment for both residents and visitors. 
-                Our barangay is committed to sustainable development, prioritizing education, healthcare, and community engagement to ensure a better quality of life for all.</p>
         </section>
     </main>
-    
-    <script src="script.js"></script>
+    <div id="newsletterPopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Subscribe to Our Newsletter</h2>
+            <form id="newsletterForm">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script> 
+    <footer>
+        <p>&copy; 2024 Barangay San Nicolas. All rights reserved.</p>
+    </footer>
 </body>
 </html>
